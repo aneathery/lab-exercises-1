@@ -9,7 +9,10 @@ my_vector <- c(my_num, initials)
 vector_sum <- sum(my_vector)
 
 # Describe why this doesn't work: 
-# 
+# The c() command combines 
+# The elements of one vector must all be of the same data type
+# Additionally, the sum() function will try to return the sum of the integer 6
+#   and the string "?. ?."
 
 install.packages("stringr")
 
@@ -18,7 +21,11 @@ my_line <- "Hey, hey, this is the library"
 print(str_length(my_line))
 
 # Describe why this doesn't work: 
-# 
+# I would use nchar() because nchar() returns the size of the character string 
+#   in bytes, chars, or width
+# str_length() returns the length of a string, but in code points.
+# This can be confusing because on code points in a string is not always equal to
+#   the number of characters
 
 said_the_famous <- paste(my_line, " - ", initial)
 
